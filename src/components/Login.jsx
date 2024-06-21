@@ -15,16 +15,22 @@ import { useToast } from "@/components/ui/use-toast";
 import loginData from "../data/login.json";
 import { useNavigate } from "react-router-dom";
 
+//context api
+import { useData } from "../DataContext";
+
 function Login() {
   // State variables
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  
+
+  const { login,isLogin } = useData();
   const { toast } = useToast();
   const navigate = useNavigate();
 
   // Check login
   const checkLogin = () => {
+
+    console.log(isLogin);
     if (userName === "" || password === "") {
       toast({
         variant: "destructive",
@@ -37,6 +43,8 @@ function Login() {
       );
 
       if (user) {
+        // set is login true
+        login();
         toast({
           variant: "success",
           title: "Success",
@@ -54,7 +62,7 @@ function Login() {
       }
     }
   };
-
+  
   return (
     <div className="bg-gray-200 flex justify-center items-center h-screen">
       <div className="p-10 rounded-lg shadow-lg">
