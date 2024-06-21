@@ -57,19 +57,19 @@ export const UserGroupIcon = () => (
   </svg>
 );
 
-export const Logout = () => 
+export const LogoutIcon  = () => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6 mr-2"
     fill="none"
-    viewBox="0 0 24 24"
-    stroke-width="1.5"
     stroke="currentColor"
-    class="size-6"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1m0-8V4m0 12v4m0 0h-3m3 0h3"
     />
-  </svg>;
-;
+  </svg>
+);
