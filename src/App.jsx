@@ -14,7 +14,7 @@ function App() {
     if (!isLogin) {
       navigate("/");
     }
-  }, []);
+  }, [isLogin]);
   // console.log(isLogin);
   return (
     <>
