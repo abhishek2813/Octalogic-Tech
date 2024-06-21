@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -19,6 +19,7 @@ import { useNavigate } from "react-router-dom";
 import { useData } from "../DataContext";
 
 function Login() {
+
   // State variables
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -26,6 +27,12 @@ function Login() {
   const { login,isLogin } = useData();
   const { toast } = useToast();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isLogin) {
+      navigate("/home");
+    }
+  }, [isLogin]);
 
   // Check login
   const checkLogin = () => {

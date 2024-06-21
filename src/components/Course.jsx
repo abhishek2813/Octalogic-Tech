@@ -21,7 +21,7 @@ import { useToast } from "./ui/use-toast";
 import { useData } from "@/DataContext";
 
 function Course() {
-  
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const {courses,setCourses} = useData();
   const [allCourses] = useState(courses);
@@ -117,7 +117,7 @@ function Course() {
 
   return (
     <div className="bg-gray">
-      <h1 className="text-2xl font-bold text-gray-400 mb-4">Courses</h1>
+      <h1 className="text-2xl font-bold text-gray-500 mb-4">Courses</h1>
       <div className="flex justify-between items-center">
         <div className="flex items-center mb-4">
           <h2 className="text-1xl text-gray-400 mb-4">Course List</h2>
