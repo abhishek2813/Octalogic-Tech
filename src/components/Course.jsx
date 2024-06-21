@@ -226,7 +226,7 @@ function Course() {
   };
 
   return (
-    <div className="bg-gray h-screen">
+    <div className="bg-gray">
       <h1 className="text-2xl font-bold text-gray-400 mb-4">Courses</h1>
       <div className="flex justify-between items-center">
         <div className="flex items-center mb-4">
