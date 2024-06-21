@@ -117,6 +117,47 @@
         "status": "Active"
       }
     ],
-    "students": ["Alice", "Bob", "Charlie"]
+    "students": [
+      {
+        "regNo": "S001",
+        "fName": "John",
+        "lName": "Doe",
+        "course": "Piano Lessons",
+        "totalFees": "$300",
+        "regDate": "2024-01-15"
+      },
+      {
+        "regNo": "S002",
+        "fName": "Jane",
+        "lName": "Smith",
+        "course": "Violin Mastery",
+        "totalFees": "$400",
+        "regDate": "2024-02-10"
+      },
+      {
+        "regNo": "S003",
+        "fName": "Alice",
+        "lName": "Johnson",
+        "course": "Singing Workshop",
+        "totalFees": "$200",
+        "regDate": "2024-03-05"
+      },
+      {
+        "regNo": "S004",
+        "fName": "Bob",
+        "lName": "Brown",
+        "course": "Drum Beats",
+        "totalFees": "$350",
+        "regDate": "2024-04-20"
+      },
+      {
+        "regNo": "S005",
+        "fName": "Charlie",
+        "lName": "Williams",
+        "course": "Bass Guitar Basics",
+        "totalFees": "$280",
+        "regDate": "2024-05-15"
+      }
+    ]
   }
   
