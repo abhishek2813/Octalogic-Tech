@@ -12,7 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
 
-import loginData from "../data/login.json";
+import loginData from "../data/api.json";
 import { useNavigate } from "react-router-dom";
 
 //context api
@@ -30,7 +30,7 @@ function Login() {
   // Check login
   const checkLogin = () => {
 
-    console.log(isLogin);
+    // console.log(isLogin);
     if (userName === "" || password === "") {
       toast({
         variant: "destructive",

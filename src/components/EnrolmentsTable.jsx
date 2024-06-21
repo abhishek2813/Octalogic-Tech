@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const EnrolmentsTable = () => {
   return (
     <div className="p-6">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-semibold text-gray">Latest Enrolments</h2>
-        <a href="#" className="text-pink-500 hover:underline">View All Courses</a>
+        <Link to="/course" className="text-pink-500 hover:underline">View All Courses</Link>
       </div>
       <div className="bg-white shadow rounded-lg overflow-hidden p-4">
         <table className="min-w-full divide-y divide-gray-200">

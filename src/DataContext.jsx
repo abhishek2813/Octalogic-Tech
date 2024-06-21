@@ -1,11 +1,35 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
-  const [isLogin, setIsLogin] = useState(false);
-  const [courses, setCourses] = useState([]);
-  const [students, setStudents] = useState([]);
+  const savedLogin = localStorage.getItem("isLogin");
+  const savedCourses = localStorage.getItem("courses");
+  const savedStudents = localStorage.getItem("students");
+
+  const [isLogin, setIsLogin] = useState(
+    savedLogin ? JSON.parse(savedLogin) : false
+  );
+  const [courses, setCourses] = useState(
+    savedCourses ? JSON.parse(savedCourses) : []
+  );
+  const [students, setStudents] = useState(
+    savedStudents ? JSON.parse(savedStudents) : []
+  );
+
+
+
+  useEffect(() => {
+    localStorage.setItem("isLogin", JSON.stringify(isLogin));
+  }, [isLogin]);
+
+  useEffect(() => {
+    localStorage.setItem("courses", JSON.stringify(courses));
+  }, [courses]);
+
+  useEffect(() => {
+    localStorage.setItem("students", JSON.stringify(students));
+  }, [students]);
 
   const login = () => {
     setIsLogin(true);
@@ -32,7 +56,7 @@ export const DataProvider = ({ children }) => {
   );
 };
 
-// Custom hook to use the DataContext
+// Custom hook
 export const useData = () => {
   return useContext(DataContext);
 };
