@@ -26,7 +26,7 @@
         "dayOfWeek": "Tuesday",
         "numberOfStudents": 12,
         "price": "$40",
-        "status": "Active"
+        "status": "Closed"
       },
       {
         "id": "4",
@@ -37,7 +37,7 @@
         "dayOfWeek": "Thursday",
         "numberOfStudents": 15,
         "price": "$20",
-        "status": "Active"
+        "status": "Achieved"
       },
       {
         "id": "5",
@@ -48,7 +48,7 @@
         "dayOfWeek": "Monday",
         "numberOfStudents": 7,
         "price": "$35",
-        "status": "Active"
+        "status": "Closed"
       },
       {
         "id": "6",
@@ -59,7 +59,7 @@
         "dayOfWeek": "Friday",
         "numberOfStudents": 9,
         "price": "$28",
-        "status": "Active"
+        "status": "Achieved"
       },
       {
         "id": "7",
@@ -81,7 +81,7 @@
         "dayOfWeek": "Tuesday",
         "numberOfStudents": 10,
         "price": "$38",
-        "status": "Active"
+        "status": "Closed"
       },
       {
         "id": "9",
@@ -92,7 +92,7 @@
         "dayOfWeek": "Thursday",
         "numberOfStudents": 11,
         "price": "$32",
-        "status": "Active"
+        "status": "Achieved"
       },
       {
         "id": "10",

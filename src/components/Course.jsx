@@ -18,122 +18,12 @@ import {
 import { Button } from "./ui/button";
 import { MenuIcon } from "./Icons";
 import { useToast } from "./ui/use-toast";
-function Course() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+import { useData } from "@/DataContext";
 
-  const [courses, setCourses] = useState([
-    {
-      id: "2",
-      name: "Piano Lessons",
-      description: "Learn piano with professional instructors.",
-      instructor: "Emily Smith",
-      instrument: "Piano",
-      dayOfWeek: "Wednesday",
-      numberOfStudents: 8,
-      price: "$30",
-      status: "Active",
-    },
-    {
-      id: "3",
-      name: "Violin Mastery",
-      description: "Master the violin with personalized coaching.",
-      instructor: "Daniel Johnson",
-      instrument: "Violin",
-      dayOfWeek: "Tuesday",
-      numberOfStudents: 12,
-      price: "$40",
-      status: "Closed",
-    },
-    {
-      id: "4",
-      name: "Singing Workshop",
-      description: "Join our vocal workshop for beginners and pros.",
-      instructor: "Sarah Davis",
-      instrument: "Voice",
-      dayOfWeek: "Thursday",
-      numberOfStudents: 15,
-      price: "$20",
-      status: "Achieved",
-    },
-    {
-      id: "5",
-      name: "Drum Beats",
-      description: "Learn drumming techniques from scratch.",
-      instructor: "Michael Brown",
-      instrument: "Drums",
-      dayOfWeek: "Monday",
-      numberOfStudents: 7,
-      price: "$35",
-      status: "Closed",
-    },
-    {
-      id: "6",
-      name: "Bass Guitar Basics",
-      description: "Master the basics of bass guitar playing.",
-      instructor: "John Taylor",
-      instrument: "Bass Guitar",
-      dayOfWeek: "Friday",
-      numberOfStudents: 9,
-      price: "$28",
-      status: "Achieved",
-    },
-    {
-      id: "7",
-      name: "Flute Melodies",
-      description: "Explore the enchanting world of flute melodies.",
-      instructor: "Emma Wilson",
-      instrument: "Flute",
-      dayOfWeek: "Wednesday",
-      numberOfStudents: 6,
-      price: "$22",
-      status: "Active",
-    },
-    {
-      id: "8",
-      name: "Trumpet Techniques",
-      description: "Learn advanced trumpet techniques with professionals.",
-      instructor: "David Clark",
-      instrument: "Trumpet",
-      dayOfWeek: "Tuesday",
-      numberOfStudents: 10,
-      price: "$38",
-      status: "Closed",
-    },
-    {
-      id: "9",
-      name: "Electronic Music Production",
-      description:
-        "Create beats and melodies with electronic music production tools.",
-      instructor: "Sophie Martinez",
-      instrument: "Electronic",
-      dayOfWeek: "Thursday",
-      numberOfStudents: 11,
-      price: "$32",
-      status: "Achieved",
-    },
-    {
-      id: "10",
-      name: "Songwriting Workshop",
-      description: "Unleash your creativity with our songwriting workshop.",
-      instructor: "Alex Turner",
-      instrument: "Songwriting",
-      dayOfWeek: "Friday",
-      numberOfStudents: 14,
-      price: "$25",
-      status: "Active",
-    },
-    {
-      id: "11",
-      name: "Harp Harmony",
-      description: "Learn the harp with harmony and precision.",
-      instructor: "Grace Lee",
-      instrument: "Harp",
-      dayOfWeek: "Monday",
-      numberOfStudents: 5,
-      price: "$45",
-      status: "Active",
-    },
-  ]);
+function Course() {
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const {courses,setCourses} = useData();
   const [allCourses] = useState(courses);
   const [searchKey, setSearchKey] = useState("");
   const [formData, setFormData] = useState({
